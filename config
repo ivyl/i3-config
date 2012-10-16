@@ -1,0 +1,121 @@
+font xft:Droid Sans Mono Dotted Bold 7.8
+new_window 1pixel 
+
+set $blue #003366
+set $gray1 #444444
+set $gray2 #111111
+
+client.focused #000000 $gray1 #FFFFFF #000000
+client.focused_inactive #000000 $gray1 #FFFFFF #000000
+client.unfocused #000000 $gray2 #FFFFFF #000000
+
+# use Mouse+Mod4 to drag floating windows to their wanted position
+floating_modifier Mod4
+
+# start a terminal
+bindsym Mod4+Shift+Return exec urxvtc
+
+# kill focused window
+bindsym Mod4+Shift+c kill
+
+# start dmenu (a program launcher)
+bindsym Mod4+p exec dmenu_run
+
+# screen lock
+bindsym Control+Mod4+l exec slimlock
+
+# change focus
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k focus up
+bindsym Mod4+l focus right
+
+# move focused window
+bindsym Mod4+Shift+h move left
+bindsym Mod4+Shift+j move down
+bindsym Mod4+Shift+k move up
+bindsym Mod4+Shift+l move right
+
+# split in horizontal orientation
+bindsym Mod4+g split h
+
+# split in vertical orientation
+bindsym Mod4+v split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod4+f fullscreen
+
+# change container layout (tabbed, toggle split)
+bindsym Mod4+w layout tabbed
+bindsym Mod4+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod4+t floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod4+space focus mode_toggle
+
+# focus the child container
+#bindsym Mod4+d focus child
+
+# switch to workspace
+bindsym Mod4+1 workspace 1
+bindsym Mod4+2 workspace 2
+bindsym Mod4+3 workspace 3
+bindsym Mod4+4 workspace 4
+bindsym Mod4+5 workspace 5
+bindsym Mod4+6 workspace 6
+bindsym Mod4+7 workspace 7
+bindsym Mod4+8 workspace 8
+bindsym Mod4+9 workspace 9
+bindsym Mod4+0 workspace 10
+
+# move focused container to workspace
+bindsym Mod4+Shift+1 move container to workspace 1
+bindsym Mod4+Shift+2 move container to workspace 2
+bindsym Mod4+Shift+3 move container to workspace 3
+bindsym Mod4+Shift+4 move container to workspace 4
+bindsym Mod4+Shift+5 move container to workspace 5
+bindsym Mod4+Shift+6 move container to workspace 6
+bindsym Mod4+Shift+7 move container to workspace 7
+bindsym Mod4+Shift+8 move container to workspace 8
+bindsym Mod4+Shift+9 move container to workspace 9
+bindsym Mod4+Shift+0 move container to workspace 10
+
+bindsym Mod4+q reload
+bindsym Mod4+Shift+r restart
+bindsym Mod4+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+mode "resize" {
+        bindsym h           resize shrink width 10 px or 10 ppt
+        bindsym j           resize grow height 10 px or 10 ppt
+        bindsym k           resize shrink height 10 px or 10 ppt
+        bindsym l   resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym Mod4+r mode "resize"
+
+# "multimedia" keys
+bindsym XF86AudioRaiseVolume exec "amixer -c 0 -- sset Master '2.00dB+'" ) -- volume up
+bindsym XF86AudioLowerVolume exec "amixer -c 0 -- sset Master '1.00dB-'" ) -- volume down
+bindsym XF86Display exec "arandr"
+bindsym XF86KbdBrightnessDown exec "sudo /opt/kbdlight/bin/kbdlight -"
+bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
+bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$((($(synclient|grep TouchpadOff|grep -o '[01]')+1)%2))"
+
+bindsym Mod4+a exec "urxvtc -e alsamixer"
+bindsym Mod4+Shift+a exec "pavucontrol"
+
+bar {
+	position top
+        status_command i3status -c ~/.i3/i3status.conf
+	colors { 
+		statusline #AAAAAA
+		focused_workspace #666666 $blue #FFFFFF
+	}
+}
+

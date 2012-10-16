@@ -1,0 +1,49 @@
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+
+URxvt.keysym.M-x    : perl:keyboard-select:activate
+URxvt.keysym.M-u    : perl:url-select:select_next
+URxvt.keysym.M-c    : perl:clipboard:copy
+URxvt.keysym.M-v    : perl:clipboard:paste
+URxvt.keysym.M-C-v  : perl:clipboard:paste_escaped
+URxvt.urlLauncher   : firefox
+URxvt.underlineURLs : true
+
+URxvt.font     : xft:Droid Sans Mono Dotted:size=8
+URxvt.termName : rxvt-256color
+URxvt.iso14755 : false
+
+URxvt.saveLines   : 12000
+URxvt.scrollBar   : false
+URxvt.scrollstyle : rxvt
+
+!XFT
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.antialias : 1
+Xft.rgba      : rgb
+
+!Solarized + tangerine + random colours
+URxvt.cursorColor            : #93a1a1
+URxvt.pointerColorBackground : #586e75
+URxvt.pointerColorForeground : #93a1a1
+
+URxvt.background : #101010
+URxvt.foreground : #CCCCCC
+URxvt.colorBD    : #FFFFFF
+URxvt.colorUL    : #CCCC66
+URxvt.color0     : #2E3436
+URxvt.color8     : #555753
+URxvt.color1     : #dc322f
+URxvt.color9     : #EF2929
+URxvt.color2     : #859900
+URxvt.color10    : #99FF66
+URxvt.color3     : #b58900
+URxvt.color11    : #FFCC66
+URxvt.color4     : #268bd2
+URxvt.color12    : #6699FF
+URxvt.color5     : #9933CC
+URxvt.color13    : #CC66FF
+URxvt.color6     : #33CC99
+URxvt.color14    : #93a1a1
+URxvt.color7     : #eee8d5
+URxvt.color15    : #fdf6e3
