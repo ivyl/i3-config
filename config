@@ -112,7 +112,7 @@ bindsym Mod4+Shift+a exec "pavucontrol"
 
 bar {
 	position top
-        status_command i3status -c ~/.i3/i3status.conf
+        status_command ~/.i3/conky
 	colors { 
 		statusline #AAAAAA
 		focused_workspace #666666 $blue #FFFFFF
