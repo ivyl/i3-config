@@ -9,11 +9,11 @@ pad_percents	  3
 override_utf8_locale yes
 
 TEXT
-,[{"full_text": " ⌬ [$cpu%] $acpitemp °C ","color": "\#DC322F"},
-  {"full_text": " ☰ [$membar] ", "color":"\#B58900"},
+,[{"full_text": " ⌬ $acpitemp°C [$cpu%]","color": "\#DC322F"},
+  {"full_text": " ☰ [$membar]", "color":"\#B58900"},
   {"full_text": " ✵  ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%]","color":"\#33CC99"},
-  {"full_text": " ☇ [${smapi_bat_perc 0}%] ","color":"\#9933CC"},
-  {"full_text": " ♪ [$mixer%] ", "color":"\#268BD2"},
+  {"full_text": " ☇ [$battery_percent%]","color":"\#9933CC"},
+  {"full_text": " ♪ [$mixer%]", "color":"\#268BD2"},
   {"full_text": " ${time %a %d %b} ${time %H:%M} "}
 ]
 
