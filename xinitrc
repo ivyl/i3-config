@@ -21,10 +21,13 @@ eval `dbus-launch --sh-syntax --exit-with-session`
 start-pulseaudio-x11 &
 urxvtd &
 
-#Keyboard layout
+#keyboard layout
 setxkbmap -layout pl
 xmodmap ~/.i3/xmodmap
 [ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
+
+#notification
+dunst -config ~/.i3/dunstrc
 
 #disks automounting
 udiskie &
