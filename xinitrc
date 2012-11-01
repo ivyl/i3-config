@@ -23,6 +23,7 @@ urxvtd &
 
 #keyboard layout
 setxkbmap -layout pl
+setxkbmap -option ctrl:nocaps
 xmodmap ~/.i3/xmodmap
 [ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
 

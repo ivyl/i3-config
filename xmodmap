@@ -1,5 +1,1 @@
 keycode 135 = Super_R
-
-clear Lock
-keycode 0x7e = Control_L
-add Control = Control_L

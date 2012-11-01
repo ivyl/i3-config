@@ -8,6 +8,7 @@
 * urxvt - terminal emulator
 * unclutter - autohide mouse cursor
 * udiskie - device automounting
+* dunst - notifications
 * pulseaudio - audio managment
 * autocutsel - clipboard synchroniation
 * dmenu - Super-P launcher
