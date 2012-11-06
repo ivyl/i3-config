@@ -8,7 +8,7 @@ URxvt.keysym.M-C-v  : perl:clipboard:paste_escaped
 URxvt.urlLauncher   : firefox
 URxvt.underlineURLs : true
 
-URxvt.font     : xft:Droid Sans Mono Dotted:size=8
+URxvt.font     : xft:Droid Sans Mono Dotted:pixelsize=11
 URxvt.termName : rxvt-256color
 URxvt.iso14755 : false
 
@@ -17,9 +17,10 @@ URxvt.scrollBar   : false
 URxvt.scrollstyle : rxvt
 
 !XFT
-Xft.lcdfilter : lcddefault
+Xft.lcdfilter : lcdlegacy
 Xft.hintstyle : hintslight
-Xft.antialias : 1
+Xft.hinting   : true
+Xft.antialias : true
 Xft.rgba      : rgb
 
 !Solarized + tangerine + random colours
