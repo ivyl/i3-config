@@ -17,7 +17,7 @@ URxvt.scrollBar   : false
 URxvt.scrollstyle : rxvt
 
 !XFT
-Xft.lcdfilter : lcdlegacy
+Xft.lcdfilter : lcddefault
 Xft.hintstyle : hintslight
 Xft.hinting   : true
 Xft.antialias : true
