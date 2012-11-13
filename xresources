@@ -1,12 +1,15 @@
 URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
 
-URxvt.keysym.M-x    : perl:keyboard-select:activate
-URxvt.keysym.M-u    : perl:url-select:select_next
-URxvt.keysym.M-c    : perl:clipboard:copy
-URxvt.keysym.M-v    : perl:clipboard:paste
-URxvt.keysym.M-C-v  : perl:clipboard:paste_escaped
-URxvt.urlLauncher   : firefox
-URxvt.underlineURLs : true
+URxvt.keysym.M-x           : perl:keyboard-select:activate
+URxvt.keysym.M-u           : perl:url-select:select_next
+URxvt.keysym.M-c           : perl:clipboard:copy
+URxvt.keysym.M-v           : perl:clipboard:paste
+URxvt.keysym.M-s           : perl:keyboard-select:search
+URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
+URxvt.url-select.launcher  : firefox
+URxvt.url-select.autocopy  : true
+URxvt.url-select.underline : true
+
 
 URxvt.font     : xft:Droid Sans Mono Dotted:pixelsize=11
 URxvt.termName : rxvt-256color
