@@ -105,7 +105,7 @@ bindsym XF86AudioLowerVolume exec "amixer -c 0 -- sset Master '1.00dB-'"
 bindsym XF86Display exec "arandr"
 bindsym XF86KbdBrightnessDown exec "sudo /opt/kbdlight/bin/kbdlight -"
 bindsym XF86KbdBrightnessUp exec "sudo /opt/kbdlight/bin/kbdlight +"
-bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$((($(synclient|grep TouchpadOff|grep -o '[01]')+1)%2))"
+bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
 
 bindsym Mod4+a exec "urxvtc -e alsamixer"
 bindsym Mod4+Shift+a exec "pavucontrol"
