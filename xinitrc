@@ -8,7 +8,7 @@ xrdb -merge ~/.i3/xresources
 feh --bg-fill ~/.i3/background
 
 #hide mouse coursor when it isn't used
-unclutter &
+unclutter -root -visible &
 
 #clipboard synchronization
 autocutsel -fork &
