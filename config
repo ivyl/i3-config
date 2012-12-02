@@ -19,7 +19,7 @@ bindsym Mod4+Shift+Return exec urxvtc
 bindsym Mod4+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym Mod4+p exec dmenu_run
+bindsym Mod4+p exec dmenu_run -nb black
 
 # screen lock
 bindsym Control+Mod4+l exec slimlock
@@ -114,7 +114,8 @@ bar {
 	position top
         status_command ~/.i3/conky
 	colors { 
-		statusline #AAAAAA
+		statusline #DDDDDD
+		background #000000
 		focused_workspace #666666 $blue #FFFFFF
 	}
 }
