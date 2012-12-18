@@ -99,7 +99,7 @@ mode "resize" {
 
 bindsym Mod4+r mode "resize"
 
-# "multimedia" keys
+# multimedia keys
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -- sset Master '2.00dB+'"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -- sset Master '1.00dB-'"
 bindsym XF86Display exec "arandr"
