@@ -1,4 +1,4 @@
-font xft:Droid Sans Mono Dotted Bold 7.8
+font xft:Inconsolata bold 8.5
 new_window 1pixel 
 
 set $blue #003366
@@ -114,7 +114,7 @@ bar {
 	position top
         status_command ~/.i3/conky
 	colors { 
-		statusline #DDDDDD
+		statusline #AAAAAA
 		background #000000
 		focused_workspace #666666 $blue #FFFFFF
 	}
