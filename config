@@ -1,13 +1,13 @@
 font xft:Inconsolata bold 8.5
-new_window 1pixel 
+new_window pixel 2
 
 set $blue #003366
 set $gray1 #444444
 set $gray2 #111111
 
-client.focused #000000 $gray1 #FFFFFF #000000
-client.focused_inactive #000000 $gray1 #FFFFFF #000000
-client.unfocused #000000 $gray2 #FFFFFF #000000
+client.focused            #000000   $gray1   #FFFFFF   #222222
+client.focused_inactive   #000000   $gray1   #FFFFFF   #222222
+client.unfocused          #000000   $gray2   #FFFFFF   #000000
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
