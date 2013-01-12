@@ -5,7 +5,7 @@ xset -b
 xrdb -merge ~/.i3/xresources
 
 #background
-feh --bg-fill ~/.i3/background
+[ -e ~/.fehbg ] && source ~/.fehbg
 
 #hide mouse coursor when it isn't used
 unclutter -root -visible &
