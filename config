@@ -37,20 +37,20 @@ bindsym Mod4+Shift+k move up
 bindsym Mod4+Shift+l move right
 
 # split in horizontal orientation
-bindsym Mod4+g split h
+bindsym Mod4+v split h
 
 # split in vertical orientation
-bindsym Mod4+v split v
+bindsym Mod4+g split v
 
 # enter fullscreen mode for the focused container
 bindsym Mod4+f fullscreen
 
 # change container layout (tabbed, toggle split)
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+bindsym Mod4+n layout tabbed
+bindsym Mod4+m layout toggle split
 
 # toggle tiling / floating
-bindsym Mod4+t floating toggle
+bindsym Mod4+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym Mod4+space focus mode_toggle
@@ -59,32 +59,30 @@ bindsym Mod4+space focus mode_toggle
 #bindsym Mod4+d focus child
 
 # switch to workspace
-bindsym Mod4+1 workspace 1
-bindsym Mod4+2 workspace 2
-bindsym Mod4+3 workspace 3
-bindsym Mod4+4 workspace 4
-bindsym Mod4+5 workspace 5
-bindsym Mod4+6 workspace 6
-bindsym Mod4+7 workspace 7
-bindsym Mod4+8 workspace 8
-bindsym Mod4+9 workspace 9
-bindsym Mod4+0 workspace 10
+bindsym Mod4+q workspace q
+bindsym Mod4+w workspace w
+bindsym Mod4+e workspace e
+bindsym Mod4+r workspace r
+bindsym Mod4+t workspace t
+bindsym Mod4+y workspace y
+bindsym Mod4+u workspace u
+bindsym Mod4+i workspace i
+bindsym Mod4+o workspace o
 
 # move focused container to workspace
-bindsym Mod4+Shift+1 move container to workspace 1
-bindsym Mod4+Shift+2 move container to workspace 2
-bindsym Mod4+Shift+3 move container to workspace 3
-bindsym Mod4+Shift+4 move container to workspace 4
-bindsym Mod4+Shift+5 move container to workspace 5
-bindsym Mod4+Shift+6 move container to workspace 6
-bindsym Mod4+Shift+7 move container to workspace 7
-bindsym Mod4+Shift+8 move container to workspace 8
-bindsym Mod4+Shift+9 move container to workspace 9
-bindsym Mod4+Shift+0 move container to workspace 10
+bindsym Mod4+Shift+q move container to workspace q
+bindsym Mod4+Shift+w move container to workspace w
+bindsym Mod4+Shift+e move container to workspace e
+bindsym Mod4+Shift+r move container to workspace r
+bindsym Mod4+Shift+t move container to workspace t
+bindsym Mod4+Shift+y move container to workspace y
+bindsym Mod4+Shift+u move container to workspace u
+bindsym Mod4+Shift+i move container to workspace i
+bindsym Mod4+Shift+o move container to workspace o
 
-bindsym Mod4+q reload
-bindsym Mod4+Shift+r restart
-bindsym Mod4+Shift+q exit
+bindsym Mod4+z reload
+bindsym Mod4+Shift+x restart
+bindsym Mod4+Shift+z exit
 
 mode "resize" {
         bindsym h           resize shrink width 10 px or 10 ppt
@@ -97,7 +95,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym Mod4+r mode "resize"
+bindsym Mod4+x mode "resize"
 
 # multimedia keys
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -- sset Master '2.00dB+'"
