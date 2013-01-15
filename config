@@ -58,27 +58,30 @@ bindsym Mod4+space focus mode_toggle
 # focus the child container
 #bindsym Mod4+d focus child
 
+# switch to last workspace
+bindsym Mod4+6 workspace back_and_forth
+
 # switch to workspace
-bindsym Mod4+q workspace q
-bindsym Mod4+w workspace w
-bindsym Mod4+e workspace e
-bindsym Mod4+r workspace r
-bindsym Mod4+t workspace t
-bindsym Mod4+y workspace y
-bindsym Mod4+u workspace u
-bindsym Mod4+i workspace i
-bindsym Mod4+o workspace o
+bindsym Mod4+q workspace 1: q
+bindsym Mod4+w workspace 2: w
+bindsym Mod4+e workspace 3: e
+bindsym Mod4+r workspace 4: r
+bindsym Mod4+t workspace 5: t
+bindsym Mod4+y workspace 6: y
+bindsym Mod4+u workspace 7: u
+bindsym Mod4+i workspace 8: i
+bindsym Mod4+o workspace 9: o
 
 # move focused container to workspace
-bindsym Mod4+Shift+q move container to workspace q
-bindsym Mod4+Shift+w move container to workspace w
-bindsym Mod4+Shift+e move container to workspace e
-bindsym Mod4+Shift+r move container to workspace r
-bindsym Mod4+Shift+t move container to workspace t
-bindsym Mod4+Shift+y move container to workspace y
-bindsym Mod4+Shift+u move container to workspace u
-bindsym Mod4+Shift+i move container to workspace i
-bindsym Mod4+Shift+o move container to workspace o
+bindsym Mod4+Shift+q move container to workspace 1: q
+bindsym Mod4+Shift+w move container to workspace 2: w
+bindsym Mod4+Shift+e move container to workspace 3: e
+bindsym Mod4+Shift+r move container to workspace 4: r
+bindsym Mod4+Shift+t move container to workspace 5: t
+bindsym Mod4+Shift+y move container to workspace 6: y
+bindsym Mod4+Shift+u move container to workspace 7: u
+bindsym Mod4+Shift+i move container to workspace 8: i
+bindsym Mod4+Shift+o move container to workspace 9: o
 
 bindsym Mod4+z reload
 bindsym Mod4+Shift+x restart
@@ -92,6 +95,7 @@ mode "resize" {
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
+        bindsym q mode "default"
         bindsym Escape mode "default"
 }
 
