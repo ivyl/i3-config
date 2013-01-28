@@ -2,6 +2,7 @@ set $mod Mod4
 
 font xft:Inconsolata bold 8.5
 new_window pixel 2
+focus_follows_mouse  no
 
 set $blue #003366
 set $gray1 #444444
