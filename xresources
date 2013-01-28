@@ -1,3 +1,5 @@
+! vim: set filetype=xdefaults :
+
 URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
 
 URxvt.keysym.M-x           : perl:keyboard-select:activate
@@ -27,27 +29,44 @@ Xft.antialias : true
 Xft.rgba      : rgb
 
 !Solarized + tangerine + random colours
-URxvt.cursorColor            : #93a1a1
-URxvt.pointerColorBackground : #586e75
-URxvt.pointerColorForeground : #93a1a1
+URxvt.cursorColor            : #93A1A1
+URxvt.pointerColorBackground : #586E75
+URxvt.pointerColorForeground : #93A1A1
 
-URxvt.background : #101010
+URxvt.background : #171717
 URxvt.foreground : #CCCCCC
-URxvt.colorBD    : #FFFFFF
-URxvt.colorUL    : #CCCC66
-URxvt.color0     : #2E3436
-URxvt.color8     : #555753
-URxvt.color1     : #dc322f
-URxvt.color9     : #EF2929
-URxvt.color2     : #859900
-URxvt.color10    : #99FF66
-URxvt.color3     : #b58900
-URxvt.color11    : #FFCC66
-URxvt.color4     : #268bd2
-URxvt.color12    : #6699FF
-URxvt.color5     : #9933CC
-URxvt.color13    : #CC66FF
-URxvt.color6     : #33CC99
-URxvt.color14    : #93a1a1
-URxvt.color7     : #eee8d5
-URxvt.color15    : #fdf6e3
+
+URxvt.colorBD : #FFFFFF
+URxvt.colorUL : #CCCC66
+
+! black 
+URxvt.color0  : #2E3436
+URxvt.color8  : #555753
+
+! red
+URxvt.color1  : #DC322F
+URxvt.color9  : #E84F4F
+
+! green
+URxvt.color2  : #859900
+URxvt.color10 : #99FF66
+
+! yellow
+URxvt.color3  : #B58900
+URxvt.color11 : #E1AA5D
+
+! blue
+URxvt.color4  : #268BD2
+URxvt.color12 : #6699FF
+
+! magenta
+URxvt.color5  : #9933CC
+URxvt.color13 : #CC66FF
+
+! cyan
+URxvt.color6  : #33CC99
+URxvt.color14 : #93A1A1
+
+! white
+URxvt.color7  : #EEE8D5
+URxvt.color15 : #FDF6E3
