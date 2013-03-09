@@ -13,7 +13,8 @@ URxvt.url-select.autocopy  : true
 URxvt.url-select.underline : true
 
 
-URxvt.font     : xft:Droid Sans Mono Dotted:pixelsize=11
+URxvt.font     : xft:Cousine:pixelsize=11
+URxvt.letterSpace: -1
 URxvt.termName : rxvt-256color
 URxvt.iso14755 : false
 

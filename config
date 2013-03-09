@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font xft:Inconsolata bold 8.5
+font xft:Cousine bold 7.2
 new_window pixel 2
 focus_follows_mouse  no
 
