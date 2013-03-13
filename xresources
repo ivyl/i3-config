@@ -34,7 +34,7 @@ URxvt.cursorColor            : #93A1A1
 URxvt.pointerColorBackground : #586E75
 URxvt.pointerColorForeground : #93A1A1
 
-URxvt.background : #171717
+URxvt.background : #333333
 URxvt.foreground : #CCCCCC
 
 URxvt.colorBD : #FFFFFF
