@@ -1,5 +1,5 @@
 [global]
-    font = Monospace-10
+    font = Cousine 10
 
     format = "%a: %s %b"
     sort = yes
@@ -24,6 +24,9 @@
     separator_height = 2;
 
     separator_color = auto
+
+    padding = 1
+    horizontal_padding = 9
 
 
 [shortcuts]
