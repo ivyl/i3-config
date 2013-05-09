@@ -13,10 +13,10 @@ URxvt.url-select.autocopy  : true
 URxvt.url-select.underline : true
 
 
-URxvt.font     : xft:Cousine:pixelsize=11
-URxvt.letterSpace: -1
-URxvt.termName : rxvt-256color
-URxvt.iso14755 : false
+URxvt.font        : xft:Cousine:pixelsize=11
+URxvt.letterSpace : -1
+URxvt.termName    : rxvt-256color
+URxvt.iso14755    : false
 
 URxvt.saveLines   : 12000
 URxvt.scrollBar   : false
