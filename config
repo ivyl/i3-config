@@ -52,6 +52,13 @@ bindsym $mod+f fullscreen
 bindsym $mod+n layout tabbed
 bindsym $mod+m layout toggle split
 
+# container navigation
+bindsym $mod+d focus parent
+bindsym $mod+b focus child
+
+# move container between displays
+bindsym $mod+semicolon move workspace to output right
+
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
 

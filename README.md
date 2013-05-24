@@ -36,5 +36,7 @@ ln -s .i3/gtkrc-2.0 .gtkrc-2.0
 * Super-t - toggle floating mode
 * Super-f - fullscreen
 * Super-r - resize mode
+* Super-d - parent container - dad
+* Super-b - child container - baby
 
 Check config for more.

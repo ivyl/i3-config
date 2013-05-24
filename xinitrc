@@ -18,7 +18,8 @@ autocutsel -selection PRIMARY -fork &
 eval `dbus-launch --sh-syntax --exit-with-session`
 
 #apps
-start-pulseaudio-x11 &
+start-pulseaudio-x11
+mpd &
 urxvtd &
 
 #keyboard layout
