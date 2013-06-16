@@ -37,4 +37,16 @@ dunst -config ~/.i3/dunstrc &
 #disks automounting
 udiskie &
 
+#creating gpg agent
+GPG_ENVFILE="$HOME/.gnupg/gpg-agent.env"
+if [ -x $(which gpg-agent) ]; then
+    eval "$(gpg-agent --enable-ssh-support --daemon --write-env-file "$GPG_ENVFILE")"
+    export GPG_AGENT_INFO
+fi
+
 i3
+
+#getting rid of gpg agent
+[ -x $(which gpg-agent) ] && kill $(grep GPG_AGENT_INFO "$GPG_ENVFILE" | cut -d: -f 2) 2>/dev/null
+
+true
