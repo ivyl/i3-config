@@ -2,3 +2,5 @@ gtk-icon-theme-name = "bw2-vista"
 gtk-theme-name = "Aldabra"
 gtk-font-name = "Cantarell 11"
 
+style "vimfix" { bg[NORMAL] = "#333333" }
+widget "vim-main-window.*GtkForm" style "vimfix"
