@@ -44,6 +44,8 @@ if [ -x $(which gpg-agent) ]; then
     export GPG_AGENT_INFO
 fi
 
+compton --config ~/.i3/compton.conf &
+
 i3
 
 #getting rid of gpg agent

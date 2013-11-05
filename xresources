@@ -31,6 +31,10 @@ Xft.hinting   : true
 Xft.antialias : true
 Xft.rgba      : rgb
 
+!Fading
+URxvt.fading    : 30
+URxvt.fadeColor : #333333
+
 !Solarized + tangerine + random colours
 URxvt.cursorColor            : #93A1A1
 URxvt.pointerColorBackground : #586E75
