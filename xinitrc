@@ -39,6 +39,9 @@ dunst -config ~/.i3/dunstrc &
 #disks automounting
 udiskie &
 
+#other
+[ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
+
 #creating gpg agent
 GPG_ENVFILE="$HOME/.gnupg/gpg-agent.env"
 if [ -x $(which gpg-agent) ]; then
@@ -46,6 +49,7 @@ if [ -x $(which gpg-agent) ]; then
     export GPG_AGENT_INFO
 fi
 
+#composition manager
 compton --config ~/.i3/compton.conf &
 
 i3
