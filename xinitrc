@@ -10,6 +10,9 @@ xrdb -merge ~/.i3/xresources
 #background
 [ -e ~/.fehbg ] && source ~/.fehbg
 
+#trackball middle button emulation
+xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
+
 #hide mouse coursor when it isn't used
 unclutter -root -visible &
 
