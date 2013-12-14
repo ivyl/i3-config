@@ -4,6 +4,9 @@
 xset -b
 xrdb -merge ~/.i3/xresources
 
+#multiple screen setup
+[ -e ~/.screen_setup ] && source ~/.screen_setup
+
 #background
 [ -e ~/.fehbg ] && source ~/.fehbg
 
