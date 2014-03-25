@@ -119,6 +119,7 @@ bindsym $mod+s mode "resize"
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
 bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
 
 bindsym XF86AudioPlay exec "~/.bin/player toggle"
 bindsym XF86AudioStop exec "~/.bin/player stop"
