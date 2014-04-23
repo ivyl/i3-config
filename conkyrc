@@ -11,7 +11,9 @@ override_utf8_locale yes
 TEXT
 ,[{"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
   {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
-  {"full_text": " ≈ ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#33CC99"},
+  ${if_up wlan0}{"full_text": " ≈ ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#33CC99"},
+  $else${if_up ppp0}{"full_text": " ≈ orange ","color":"\#33CC99"},$else
+  {"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif
   {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
   {"full_text": " ♪ [$mixer%] ", "color":"\#268BD2"},
   {"full_text": " ${time %a %d %b} ${time %H:%M} "}
