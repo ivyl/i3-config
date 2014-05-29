@@ -1,0 +1,5 @@
+[Settings]
+gtk-theme-name = iris-dark
+gtk-fallback-icon-theme = AwOkenDark
+gtk-application-prefer-dark-theme = true
+gtk-font-name = Cantarell 11

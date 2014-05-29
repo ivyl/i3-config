@@ -1,5 +1,5 @@
-gtk-icon-theme-name = "bw2-vista"
-gtk-theme-name = "Aldabra"
+gtk-icon-theme-name = "AwOkenDark"
+gtk-theme-name = "iris-dark"
 gtk-font-name = "Cantarell 11"
 
 style "vimfix" { bg[NORMAL] = "#333333" }
