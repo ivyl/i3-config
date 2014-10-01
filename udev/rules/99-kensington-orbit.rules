@@ -1,1 +1,0 @@
-ACTION=="add", SUBSYSTEM=="usb", ATTRS{idVendor}=="047d", ATTRS{idProduct}=="2048", RUN+="/opt/udev/kensington-trackball"

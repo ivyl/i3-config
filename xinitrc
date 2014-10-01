@@ -4,16 +4,11 @@
 xset -b
 xrdb -merge ~/.i3/xresources
 
-xhost +local:root
-
 #multiple screen setup
 [ -e ~/.screen_setup ] && source ~/.screen_setup
 
 #background
 [ -e ~/.fehbg ] && source ~/.fehbg
-
-#trackball middle button emulation
-xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
 
 #hide mouse coursor when it isn't used
 unclutter -root -visible &
@@ -52,7 +47,7 @@ fi
 #composition manager
 compton --config ~/.i3/compton.conf &
 
-nm-applet &
+>> /dev/null which nm-applet && nm-applet &
 
 # thinkpad dock support
 [ -e ~/.thinkpad_dock ] && ~/.i3/dockery.sh &
