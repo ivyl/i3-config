@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+FIFO=/tmp/dockery
+
+function main() {
+    case $ACTION in
+        add) echo "dock" > $FIFO ;;
+        remove) echo "undock" > $FIFO ;;
+    esac
+}
+
+main

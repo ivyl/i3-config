@@ -19,7 +19,7 @@
 * xmodmap - custom key changes
 
 
-##Installation
+## Installation
 It's as simple as that:
 
 ```bash
@@ -30,7 +30,15 @@ ln -s .i3/gtkrc-2.0 .gtkrc-2.0
 ln -f $PWD/gtk-3.0-settings ~/.config/gtk-3.0/settings.ini
 ```
 
-##Bindings
+## Additional Features
+Udev folder contains udev rules and executables to be put under /opt
+
+One rule and file supports kensington tracbkall hotplugging - it enables
+middle mouse button emulation.
+
+Second one makes use of `dockery.sh` and handles docking and undocking.
+
+## Bindings
 * Super-Shift-c - close current windows
 * Super-Shift-Enter - open terminal
 * Super - drag floating windows

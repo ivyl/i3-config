@@ -1,0 +1,3 @@
+#!/bin/sh
+export DISPLAY=:0
+nohup bash -c 'sleep 2 && xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1' >> /dev/null 2>> /dev/null &

@@ -4,6 +4,8 @@
 xset -b
 xrdb -merge ~/.i3/xresources
 
+xhost +local:root
+
 #multiple screen setup
 [ -e ~/.screen_setup ] && source ~/.screen_setup
 
@@ -25,8 +27,6 @@ mpd &
 urxvtd &
 
 #keyboard layout
-setxkbmap -layout pl
-setxkbmap -option ctrl:nocaps
 xmodmap ~/.i3/xmodmap
 [ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
 
@@ -51,6 +51,11 @@ fi
 
 #composition manager
 compton --config ~/.i3/compton.conf &
+
+nm-applet &
+
+# thinkpad dock support
+[ -e ~/.thinkpad_dock ] && ~/.i3/dockery.sh &
 
 i3
 
