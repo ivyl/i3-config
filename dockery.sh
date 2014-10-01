@@ -16,13 +16,13 @@ function undock() {
 }
 
 function dock() {
-    xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
-
     xrandr --output HDMI2 --right-of LVDS1 --auto
     pacmd set-sink-port alsa_output.pci-0000_00_1b.0.analog-stereo analog-output
     nmcli radio wifi off
 
     both
+
+    sleep 3 && xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
 }
 
 

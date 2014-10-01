@@ -2,10 +2,15 @@
 
 FIFO=/tmp/dockery
 
+function send_command() {
+    [ -p $FIFO ] && echo "$1" > $FIFO
+}
+
+
 function main() {
     case $ACTION in
-        add) echo "dock" > $FIFO ;;
-        remove) echo "undock" > $FIFO ;;
+        add) send_command "dock" ;;
+        remove) send_command "undock" ;;
     esac
 }
 
