@@ -33,8 +33,11 @@ ln -f $PWD/gtk-3.0-settings ~/.config/gtk-3.0/settings.ini
 ## Additional Features
 Udev folder contains udev rules and executables to be put under /opt
 
-The reule makes use of `dockery.sh` and handles docking and undocking of
+The rule makes use of `dockery.sh` and handles docking and undocking of
 Thinkpad's minidock.
+
+`touch ~/.thinkpad_dock` to enable.
+
 
 ## Bindings
 * Super-Shift-c - close current windows

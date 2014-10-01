@@ -3,23 +3,26 @@
 FIFO=/tmp/dockery
 
 function both() {
-    sleep 1
     xset -b
+    [ -e ~/.fehbg ] && source ~/.fehbg
 }
 
 function undock() {
-    both
     xrandr --output HDMI2 --off
     pacmd set-sink-port alsa_output.pci-0000_00_1b.0.analog-stereo analog-output-speaker
-    nmcli r wifi on
+    nmcli radio wifi on
+
+    both
 }
 
 function dock() {
-    both
+    xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
+
     xrandr --output HDMI2 --right-of LVDS1 --auto
     pacmd set-sink-port alsa_output.pci-0000_00_1b.0.analog-stereo analog-output
-    xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
-    nmcli r wifi off
+    nmcli radio wifi off
+
+    both
 }
 
 
@@ -45,6 +48,7 @@ function main() {
     local cmd
     while true; do
         read -r cmd < $FIFO
+        sleep 1
         echo "[dockery] command: $cmd"
 
         case $cmd in
