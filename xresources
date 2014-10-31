@@ -1,6 +1,6 @@
 ! vim: set filetype=xdefaults :
 
-URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard
+URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard,font-size
 
 URxvt.keysym.M-x           : perl:keyboard-select:activate
 URxvt.keysym.M-u           : perl:url-select:select_next
@@ -11,6 +11,10 @@ URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
 URxvt.url-select.launcher  : firefox
 URxvt.url-select.autocopy  : true
 URxvt.url-select.underline : true
+
+! https://github.com/majutsushi/urxvt-font-size
+URxvt.keysym.C-equal:     perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
 
 
 URxvt.font        : xft:Cousine:pixelsize=11
