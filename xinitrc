@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH="$PATH:$HOME/.i3/bin"
+
 #settings
 xset -b
 xrdb -merge ~/.i3/xresources
@@ -50,7 +52,7 @@ compton --config ~/.i3/compton.conf &
 >> /dev/null which nm-applet && nm-applet &
 
 # thinkpad dock support
-[ -e ~/.thinkpad_dock ] && ~/.i3/dockery.sh &
+[ -e ~/.thinkpad_dock ] && ~/.i3/bin/dockery.sh &
 
 i3
 

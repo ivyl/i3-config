@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd "$HOME/.i3"
+
+case "$1" in
+    on)  cpp light.xresources | apply-colors-runtime ;;
+    off) cpp dark.xresources  | apply-colors-runtime ;;
+    *) echo "$0 on|off" ;;
+esac
