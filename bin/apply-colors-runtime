@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-LINE_FORMAT = /^\s*URxvt.(color\w+|background|foreground|cursorColor)\s*:\s*([#\w]+)\s*$/
+LINE_FORMAT = /^\s*\w+[.*](color\w+|background|foreground|cursorColor)\s*:\s*([#\w]+)\s*$/
 
 NAME_TO_SEQ = {
   'foreground' => '10',
