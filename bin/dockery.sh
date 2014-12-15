@@ -8,17 +8,18 @@ function both() {
 }
 
 function undock() {
-    xrandr --output HDMI2 --off
+    xrandr --output VGA1 --off
     pacmd set-sink-port alsa_output.pci-0000_00_1b.0.analog-stereo analog-output-speaker
-    nmcli radio wifi on
+    # nmcli radio wifi on
 
     both
 }
 
 function dock() {
-    xrandr --output HDMI2 --right-of LVDS1 --auto
+    xrandr --output VGA1 --right-of LVDS1 --auto
     pacmd set-sink-port alsa_output.pci-0000_00_1b.0.analog-stereo analog-output
-    nmcli radio wifi off
+    # nmcli radio wifi off
+    # nmcli radio wwan off
 
     both
 
