@@ -1,0 +1,10 @@
+[Unit]
+Description=GnuPG private key agent
+IgnoreOnIsolate=true
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/gpg-agent --daemon --disable-scdaemon --enable-ssh-support
+
+[Install]
+WantedBy=default.target

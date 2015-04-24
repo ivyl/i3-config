@@ -1,0 +1,12 @@
+[Unit]
+Description=User docking actions
+BindsTo=dev-thinkdock.device
+After=dev-thinkdock.device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment="DISPLAY=:0.0"
+Environment="XAUTHORITY=%h/.Xauthority"
+ExecStart=/bin/zsh %h/.i3/dockery.sh dock
+ExecStop=/bin/zsh %h/.i3/dockery.sh undock
