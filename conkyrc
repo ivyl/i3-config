@@ -17,6 +17,7 @@ TEXT
   $else{"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif$endif
   {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
   {"full_text": " ♪ [$mixer%] ", "color":"\#268BD2"},
-  {"full_text": " ${time %a %d %b} ${time %H:%M} "}
+  {"full_text": " ${time WW%V.%u, %a %d %b}"},
+  {"full_text": " ${time %H:%M} "}
 ]
 
