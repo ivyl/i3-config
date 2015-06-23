@@ -10,6 +10,10 @@ fi
 # so all binaries are visible in dmenu_run
 export PATH="$PATH:$HOME/.i3/bin:$HOME/.bin:$HOME/bin"
 
+# logging in with dock
+lsusb | grep -q "ThinkPad Mini Dock"
+[ "$?" -eq 0 ] && dockery.sh dock
+
 # use xresources
 xrdb -merge ~/.i3/xresources
 

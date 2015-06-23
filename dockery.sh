@@ -12,7 +12,6 @@ function undock() {
 }
 
 function dock() {
-    pactl set-default-sink alsa_output.usb-FiiO_DigiHug_USB_Audio-01-Audio.analog-stereo
     xrandr --output DP2 --right-of LVDS1 --auto
     nmcli radio wifi off
     nmcli radio wwan off
@@ -20,6 +19,7 @@ function dock() {
     both
 
     sleep 2
+    pactl set-default-sink alsa_output.usb-FiiO_DigiHug_USB_Audio-01-Audio.analog-stereo
     xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
 }
 
