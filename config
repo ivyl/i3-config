@@ -138,7 +138,7 @@ bindsym $mod+Shift+a exec "pavucontrol"
 bar {
         position top
         status_command ~/.i3/bin/conky-wrapper
-        colors { 
+        colors {
                 statusline #AAAAAA
                 background #333333
                 focused_workspace $gray2 $gray2 #FFFFFF
