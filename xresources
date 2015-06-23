@@ -17,8 +17,7 @@ URxvt.keysym.C-equal:     perl:font-size:increase
 URxvt.keysym.C-minus:   perl:font-size:decrease
 
 
-URxvt.font        : xft:Cousine:pixelsize=11
-URxvt.letterSpace : -1
+URxvt.font        : xft:Terminus:pixelsize=10
 URxvt.termName    : rxvt-256color
 URxvt.iso14755    : false
 

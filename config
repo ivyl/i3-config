@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font xft:Cousine bold 7.2
+font pango:Terminus 11px
 
 new_window pixel 3
 focus_follows_mouse  no
