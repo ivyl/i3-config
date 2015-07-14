@@ -13,7 +13,6 @@ function undock() {
 
 function dock() {
     xrandr --output DP2 --right-of LVDS1 --auto
-    nmcli radio wifi off
     nmcli radio wwan off
 
     both
