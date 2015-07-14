@@ -12,7 +12,7 @@ export PATH="$PATH:$HOME/.i3/bin:$HOME/.bin:$HOME/bin"
 
 # logging in with dock
 lsusb | grep -q "ThinkPad Mini Dock"
-[ "$?" -eq 0 ] && dockery.sh dock
+[ "$?" -eq 0 ] && $HOME/.i3/dockery.sh dock &
 
 # use xresources
 xrdb -merge ~/.i3/xresources
