@@ -8,11 +8,10 @@ focus_follows_mouse  no
 #don't move to neighbouring screen with hjkl
 force_focus_wrapping yes
 
-set $blue #005588
-set $gray1 #484848
-set $gray2 #333333
+set $gray1 #373d48
+set $gray2 #29303a
 
-client.focused            $gray1   $gray1   #FFFFFF   #333333
+client.focused            $gray1   $gray1   #FFFFFF   $gray1
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
 client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 
@@ -140,7 +139,7 @@ bar {
         status_command ~/.i3/bin/conky-wrapper
         colors {
                 statusline #AAAAAA
-                background #333333
+                background $gray2
                 focused_workspace $gray2 $gray2 #FFFFFF
                 inactive_workspace $gray1 $gray1 #AAAAAA
         }

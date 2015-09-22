@@ -59,6 +59,8 @@ compton --config ~/.i3/compton.conf &
 >> /dev/null which nm-applet && nm-applet &
 >> /dev/null which blueman--applet && blueman-applet &
 
+xcape
+
 i3
 
 true

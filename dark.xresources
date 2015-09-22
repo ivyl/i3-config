@@ -6,7 +6,7 @@ URxvt.pointerColorBackground : #586E75
 URxvt.pointerColorForeground : #93A1A1
 URxvt.cursorColor            : #93A1A1
 
-URxvt.background : #333333
+URxvt.background : #29303a
 URxvt.foreground : #CCCCCC
 
 URxvt.colorBD : #FFFFFF

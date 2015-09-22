@@ -34,8 +34,8 @@ Xft.hinting   : true
 Xft.antialias : true
 Xft.rgba      : rgb
 
-! Fading
-URxvt.fading    : 30
-URxvt.fadeColor : #333333
+!Fading
+URxvt.fading    : 50
+URxvt.fadeColor : #29303a
 
 #include "dark.xresources"
