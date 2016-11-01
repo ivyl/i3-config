@@ -46,7 +46,7 @@ udiskie &
 [ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
 
 # gpg agent
-export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
+export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 gpg-connect-agent updatestartuptty /bye
 
 # composition manager
