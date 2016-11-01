@@ -12,6 +12,8 @@ export I3_CONFIG_DIR="$(dirname $(readlink -f $0))"
 # so all binaries are visible in dmenu_run
 export PATH="$PATH:$I3_CONFIG_DIR/bin:$HOME/.bin:$HOME/bin"
 
+export MOZ_USE_OMTC=1
+
 # logging in with dock
 lsusb | grep -q "ThinkPad Mini Dock"
 [ "$?" -eq 0 ] && $I3_CONFIG_DIR/dockery.sh dock &
