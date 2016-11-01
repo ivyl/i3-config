@@ -1,5 +1,5 @@
 [global]
-    font = Cousine 10
+    font = Terminus 11
 
     format = "%a: %s %b"
     sort = yes
@@ -49,7 +49,4 @@
     foreground = "#DDDDDD"
     timeout = 0
 
-[ignore]
-    appname = "Spotify"
-    summary = "*"
-    format = ""
+# vim: ft=cfg
