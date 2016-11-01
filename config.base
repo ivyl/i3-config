@@ -123,5 +123,3 @@ bar {
                 inactive_workspace $gray1 $gray1 #AAAAAA
         }
 }
-
-#include "config.local"
