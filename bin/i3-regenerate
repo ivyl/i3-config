@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd $I3_CONFIG_DIR
+cat config.base config.local > config

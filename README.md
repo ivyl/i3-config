@@ -24,19 +24,17 @@ It's as simple as that:
 
 ```bash
 cd
-git clone https://github.com/ivyl/i3-config.git .i3
-ln -s .i3/xinitrc .xinitrc
-ln -s .i3/gtkrc-2.0 .gtkrc-2.0
-ln -f $PWD/gtk-3.0-settings ~/.config/gtk-3.0/settings.ini
+git clone https://github.com/ivyl/i3-config.git .config/i3
+ln -s .config/i3/xinitrc .xinitrc
+ln -s .config/i3/gtkrc-2.0 .gtkrc-2.0
+ln -f .config/i3/gtk-3.0-settings ~/.config/gtk-3.0/settings.ini
 ```
 
 ## Additional Features
 Udev folder contains udev rules and executables to be put under /opt
 
-The rule makes use of `dockery.sh` and handles docking and undocking of
-Thinkpad's minidock.
-
-`touch ~/.thinkpad_dock` to enable.
+config is created from config.base and config.local to allow for
+per-machine configuration
 
 
 ## Bindings
