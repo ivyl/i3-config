@@ -8,8 +8,8 @@ focus_follows_mouse  no
 #don't move to neighbouring screen with hjkl
 force_focus_wrapping yes
 
-set $gray1 #373d48
-set $gray2 #29303a
+set $gray1 #323232
+set $gray2 #282828
 
 client.focused            $gray1   $gray1   #FFFFFF   $gray1
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
@@ -19,7 +19,7 @@ client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+c kill
@@ -131,7 +131,7 @@ bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/Touch
 
 bindsym XF86Display exec "arandr"
 
-bindsym $mod+a exec "urxvtc -e alsamixer"
+bindsym $mod+a exec "st -e alsamixer"
 bindsym $mod+Shift+a exec "pavucontrol"
 
 bar {

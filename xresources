@@ -1,41 +1,8 @@
 ! vim: set filetype=xdefaults :
 
-URxvt.perl-ext-common : default,keyboard-select,url-select,clipboard,font-size
-
-URxvt.keysym.M-x           : perl:keyboard-select:activate
-URxvt.keysym.M-u           : perl:url-select:select_next
-URxvt.keysym.M-c           : perl:clipboard:copy
-URxvt.keysym.M-v           : perl:clipboard:paste
-URxvt.keysym.M-s           : perl:keyboard-select:search
-URxvt.keysym.M-C-v         : perl:clipboard:paste_escaped
-URxvt.url-select.launcher  : firefox
-URxvt.url-select.autocopy  : true
-URxvt.url-select.underline : true
-
-! https://github.com/majutsushi/urxvt-font-size
-URxvt.keysym.C-equal:     perl:font-size:increase
-URxvt.keysym.C-minus:   perl:font-size:decrease
-
-
-URxvt.font        : xft:Terminus:pixelsize=10
-URxvt.termName    : rxvt-256color
-URxvt.iso14755    : false
-
-URxvt.urgentOnBell: true
-
-URxvt.saveLines   : 12000
-URxvt.scrollBar   : false
-URxvt.scrollstyle : rxvt
-
 ! XFT
 Xft.lcdfilter : lcddefault
 Xft.hintstyle : hintslight
 Xft.hinting   : true
 Xft.antialias : true
 Xft.rgba      : rgb
-
-!Fading
-URxvt.fading    : 50
-URxvt.fadeColor : #29303a
-
-#include "dark.xresources"

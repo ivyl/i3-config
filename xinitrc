@@ -42,9 +42,6 @@ dunst -config ~/.i3/dunstrc &
 # disks automounting
 udiskie &
 
-# terminal server
-urxvtd &
-
 # dropbox
 [ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
 
