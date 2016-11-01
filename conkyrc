@@ -1,23 +1,31 @@
-background        no
-out_to_console 	  yes
-out_to_x	  no
-update_interval	  2
-total_run_times	  0
-short_units	  yes
-pad_percents	  3
+conky.config = {
+	background           = false,
+	out_to_console       = true,
+	out_to_x             = false,
+	update_interval      = 2,
+	total_run_times      = 0,
+	short_units          = true,
+	pad_percents         = 3,
+	override_utf8_locale = true,
+};
 
-override_utf8_locale yes
-
-TEXT
-,[{"full_text": " ❤ $acpitemp°C [$cpu%] ","color": "\#DC322F"},
-  {"full_text": " ≣ [$membar] ", "color":"\#B58900"},
-  ${if_up wlan0}{"full_text": " ≈ ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#33CC99"},
-  $else${if_up ppp0}{"full_text": " ≈ orange ","color":"\#33CC99"},
-  $else${if_up eth0}{"full_text": " ≈ eth0 ","color":"\#33CC99"},
-  $else{"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif$endif
-  {"full_text": " ☇ [$battery_percent%] ","color":"\#9933CC"},
-  {"full_text": " ♪ [$mixer%] ", "color":"\#268BD2"},
+conky.text = [[
+,[{"full_text": " ❤ $acpitemp°C [$cpu%] ",                                        "color":"\#DC322F"},
+  {"full_text": " ≣ [$membar] ",                                                  "color":"\#B58900"},
+  ${if_up wlan0}
+  {"full_text": " ≈ ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#33CC99"},
+  $else${if_up ppp0}
+  {"full_text": " ≈ HSDPA ",                                                      "color":"\#33CC99"},
+  $else${if_up eth1}
+  {"full_text": " ≈ eth1 ",                                                       "color":"\#33CC99"},
+  $else${if_up eth0}
+  {"full_text": " ≈ eth0 ",                                                       "color":"\#33CC99"},
+  $else
+  {"full_text": " ≈ no connection ",                                              "color":"\#33CC99"},
+  $endif$endif$endif$endif
+  {"full_text": " ☇ [$battery_percent%] ",                                        "color":"\#9933CC"},
+  {"full_text": " ♪ [$mixer%] ",                                                  "color":"\#268BD2"},
   {"full_text": " ${time WW%V.%u, %a %d %b}"},
   {"full_text": " ${time %H:%M} "}
 ]
-
+]];
