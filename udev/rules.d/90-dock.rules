@@ -1,1 +1,0 @@
-ACTION=="add", SUBSYSTEM=="usb", TAG+="systemd", ENV{DEVTYPE}=="usb_device", ENV{PRODUCT}=="17ef/100a/*", ENV{SYSTEMD_READY}="1", ENV{SYSTEMD_USER_WANTS}="dock.service", SYMLINK+="thinkdock"
