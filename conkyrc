@@ -25,7 +25,9 @@ conky.text = [[
   $endif$endif$endif$endif
   {"full_text": " ☇ [$battery_percent%] ",                                        "color":"\#9933CC"},
   {"full_text": " ♪ [$mixer%] ",                                                  "color":"\#268BD2"},
-  {"full_text": " ${time WW%V.%u, %a %d %b}"},
+  {"full_text": " FM ${tztime US/Pacific %H:%M} "},
+  {"full_text": " BA ${tztime Asia/Calcutta %H:%M} "},
+  {"full_text": " ${exec date-ww-fix} "},
   {"full_text": " ${time %H:%M} "}
 ]
 ]];

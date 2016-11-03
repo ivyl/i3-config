@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo -n WW
+echo -n $(($(date +%V)+1))
+date "+.%u, %a %d %b"
