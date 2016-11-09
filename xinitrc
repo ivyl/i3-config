@@ -28,9 +28,9 @@ unclutter -root -visible &
 # pulse audio session
 start-pulseaudio-x11
 
-# keyboard layout
+# keyboard layout customization
 xmodmap $I3_CONFIG_DIR/xmodmap
-[ -e ~/.xmodmap_local ] && xmodmap ~/.xmodmap_local
+[ -e $I3_CONFIG_DIR/xmodmap_local ] && xmodmap $I3_CONFIG_DIR/xmodmap_local
 
 # color temperature adjustment, set for Gdańsk
 redshift -l 54.35:18.65 -m randr -t 5500:4500 -g 0.75:0.75:0.75 &

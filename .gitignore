@@ -2,3 +2,4 @@ config
 config.local
 systemd/user/default.target.wants
 screen_setup
+xmodmap_local
