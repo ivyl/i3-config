@@ -57,7 +57,7 @@ compton --config $I3_CONFIG_DIR/compton.conf &
 
 # Network Manager applet
 >> /dev/null which nm-applet && nm-applet &
->> /dev/null which blueman--applet && blueman-applet &
+>> /dev/null which blueman-applet && blueman-applet &
 
 i3-regenerate
 i3
