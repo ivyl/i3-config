@@ -59,8 +59,6 @@ compton --config $I3_CONFIG_DIR/compton.conf &
 >> /dev/null which nm-applet && nm-applet &
 >> /dev/null which blueman--applet && blueman-applet &
 
-xcape
-
 i3-regenerate
 i3
 
