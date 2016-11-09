@@ -9,8 +9,7 @@ fi
 
 export I3_CONFIG_DIR="$(dirname $(readlink -f $0))"
 
-# so all binaries are visible in dmenu_run
-export PATH="$PATH:$I3_CONFIG_DIR/bin:$HOME/.bin:$HOME/bin"
+export PATH="$PATH:$I3_CONFIG_DIR/bin:$HOME/bin"
 
 export MOZ_USE_OMTC=1
 
