@@ -45,9 +45,6 @@ dunst -config $I3_CONFIG_DIR/dunstrc &
 # disks automounting
 udiskie &
 
-# dropbox
-[ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
-
 # trackball
 xinput set-prop "Primax Kensington Eagle Trackball" "Evdev Middle Button Emulation" 1
 
