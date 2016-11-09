@@ -32,8 +32,12 @@ start-pulseaudio-x11
 xmodmap $I3_CONFIG_DIR/xmodmap
 [ -e $I3_CONFIG_DIR/xmodmap_local ] && xmodmap $I3_CONFIG_DIR/xmodmap_local
 
-# color temperature adjustment, set for Gdańsk
-redshift -l 54.35:18.65 -m randr -t 5500:4500 -g 0.75:0.75:0.75 &
+# dynamic color temperature adjustment
+if [ -e $I3_CONFIG_DIR/redshift ]; then
+    source $I3_CONFIG_DIR/redshift
+else # default setup, for gdansk
+    redshift -l 54.35:18.65 -m randr -t 5500:4500 -g 0.75:0.75:0.75 &
+fi
 
 # notification
 dunst -config $I3_CONFIG_DIR/dunstrc &
