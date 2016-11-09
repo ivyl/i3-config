@@ -13,10 +13,6 @@ export PATH="$PATH:$I3_CONFIG_DIR/bin:$HOME/bin"
 
 export MOZ_USE_OMTC=1
 
-# logging in with dock
-lsusb | grep -q "ThinkPad Mini Dock"
-[ "$?" -eq 0 ] && $I3_CONFIG_DIR/dockery.sh dock &
-
 # use xresources
 xrdb -merge $I3_CONFIG_DIR/xresources
 
