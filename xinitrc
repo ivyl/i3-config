@@ -17,7 +17,7 @@ export MOZ_USE_OMTC=1
 xrdb -merge $I3_CONFIG_DIR/xresources
 
 # multiple screen setup
-[ -e ~/.screen_setup ] && source ~/.screen_setup
+[ -e $I3_CONFIG_DIR/screen_setup ] && source $I3_CONFIG_DIR/screen_setup
 
 # background
 [ -e ~/.fehbg ] && source ~/.fehbg
