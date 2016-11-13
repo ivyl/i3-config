@@ -7,8 +7,8 @@ focus_follows_mouse  no
 
 force_focus_wrapping yes
 
-set $gray1 #323232
-set $gray2 #282828
+set $gray1 #073642
+set $gray2 #002b36
 
 client.focused            $gray1   $gray1   #FFFFFF   $gray1
 client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
