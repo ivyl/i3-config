@@ -22,7 +22,7 @@ bindsym $mod+c kill
 
 bindsym $mod+p exec "dmenu_run -nb black -p run -fn Terminus-11"
 
-bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu -fn Terminus-11"
+bindsym $mod+Shift+p exec "~/bin/pass-autotype-dmenu -fn Terminus-11"
 
 bindsym Control+$mod+l exec i3lock -c 282828
 
