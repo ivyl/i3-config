@@ -7,12 +7,29 @@ focus_follows_mouse  no
 
 force_focus_wrapping yes
 
-set $gray1 #073642
-set $gray2 #002b36
+set $based3    #002b36
+set $based2    #073642
+set $based1    #586e75
+set $based0    #657b83
+set $base0     #839496
+set $base1     #93a1a1
+set $base2     #eee8d5
+set $base3     #fdf6e3
+set $yellow    #b58900
+set $orange    #cb4b16
+set $red       #dc322f
+set $magenta   #d33682
+set $violet    #6c71c4
+set $blue      #268bd2
+set $cyan      #2aa198
+set $green     #859900
 
-client.focused            $gray1   $gray1   #FFFFFF   $gray1
-client.focused_inactive   $gray2   $gray2   #FFFFFF   #000000
-client.unfocused          $gray2   $gray2   #FFFFFF   #000000
+
+client.focused            $based3   $based2   $base3   $based1
+client.focused_inactive   $based3   $based3   $base0   $based2
+client.unfocused          $based3   $based3   $base0   $based2
+client.urgent             $based3   $magenta  $base3   $based3
+
 
 floating_modifier $mod
 
@@ -117,9 +134,11 @@ bar {
         position top
         status_command conky-wrapper
         colors {
-                statusline #AAAAAA
-                background $gray2
-                focused_workspace $gray2 $gray2 #FFFFFF
-                inactive_workspace $gray1 $gray1 #AAAAAA
+                statusline $based0
+                background $based3
+                focused_workspace $based3 $based3 $base3
+                inactive_workspace $based3 $based2 $base0
+                active_workspace $based3 $based2 $base3
+                urgent_workspace $based3 $magenta $base2
         }
 }
