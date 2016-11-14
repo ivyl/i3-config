@@ -73,25 +73,25 @@ bindsym $mod+space focus mode_toggle
 
 bindsym $mod+6 workspace back_and_forth
 
-bindsym $mod+q workspace 1: q
-bindsym $mod+w workspace 2: w
-bindsym $mod+e workspace 3: e
-bindsym $mod+r workspace 4: r
-bindsym $mod+t workspace 5: t
-bindsym $mod+y workspace 6: y
-bindsym $mod+u workspace 7: u
-bindsym $mod+i workspace 8: i
-bindsym $mod+o workspace 9: o
+bindsym $mod+q workspace 1:q
+bindsym $mod+w workspace 2:w
+bindsym $mod+e workspace 3:e
+bindsym $mod+r workspace 4:r
+bindsym $mod+t workspace 5:t
+bindsym $mod+y workspace 6:y
+bindsym $mod+u workspace 7:u
+bindsym $mod+i workspace 8:i
+bindsym $mod+o workspace 9:o
 
-bindsym $mod+Shift+q move container to workspace 1: q
-bindsym $mod+Shift+w move container to workspace 2: w
-bindsym $mod+Shift+e move container to workspace 3: e
-bindsym $mod+Shift+r move container to workspace 4: r
-bindsym $mod+Shift+t move container to workspace 5: t
-bindsym $mod+Shift+y move container to workspace 6: y
-bindsym $mod+Shift+u move container to workspace 7: u
-bindsym $mod+Shift+i move container to workspace 8: i
-bindsym $mod+Shift+o move container to workspace 9: o
+bindsym $mod+Shift+q move container to workspace 1:q
+bindsym $mod+Shift+w move container to workspace 2:w
+bindsym $mod+Shift+e move container to workspace 3:e
+bindsym $mod+Shift+r move container to workspace 4:r
+bindsym $mod+Shift+t move container to workspace 5:t
+bindsym $mod+Shift+y move container to workspace 6:y
+bindsym $mod+Shift+u move container to workspace 7:u
+bindsym $mod+Shift+i move container to workspace 8:i
+bindsym $mod+Shift+o move container to workspace 9:o
 
 bindsym $mod+z reload
 bindsym $mod+Shift+x restart
@@ -133,6 +133,7 @@ bindsym $mod+Shift+a exec "pavucontrol"
 bar {
         position top
         status_command conky-wrapper
+        strip_workspace_numbers yes
         colors {
                 statusline $based0
                 background $based3
