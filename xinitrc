@@ -9,7 +9,7 @@ fi
 
 export I3_CONFIG_DIR="$(dirname $(readlink -f $0))"
 
-export PATH="$PATH:$I3_CONFIG_DIR/bin:$HOME/bin"
+export PATH="$PATH:$I3_CONFIG_DIR/bin:$HOME/bin-priv:$HOME/bin"
 
 export MOZ_USE_OMTC=1
 
