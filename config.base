@@ -25,10 +25,10 @@ set $cyan      #2aa198
 set $green     #859900
 
 
-client.focused            $based3   $based2   $base3   $based3
-client.focused_inactive   $based3   $based3   $base0   $based3
-client.unfocused          $based3   $based3   $base0   $based3
-client.urgent             $based3   $magenta  $base3   $based3
+client.focused            $based3   $based2   $base3   $based3  $based2
+client.focused_inactive   $based3   $based3   $base0   $based3  $based3
+client.unfocused          $based3   $based3   $base0   $based3  $based3
+client.urgent             $based3   $magenta  $base3   $based3  $magenta
 
 
 floating_modifier $mod
