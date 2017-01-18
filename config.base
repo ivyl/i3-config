@@ -38,7 +38,7 @@ bindsym $mod+Return exec st
 bindsym $mod+c kill
 
 bindsym $mod+p       exec dmenu_run -p run          -sb "$based1"  -nb "$based3" -nf "$based0" -fn Terminus-11
-bindsym $mod+Shift+p exec ~/bin/pass-autotype-dmenu -sb "$magenta" -nb "$based3" -nf "$based0" -fn Terminus-11
+bindsym $mod+Shift+p exec ~/bin/pass-autotype       -sb "$magenta" -nb "$based3" -nf "$based0" -fn Terminus-11
 
 bindsym Control+$mod+l exec i3lock -c "$based3"
 
