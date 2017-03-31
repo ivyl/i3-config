@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Terminus 11px
+font pango:Droid Sans Mono Dotted 12px
 
 new_window pixel 3
 focus_follows_mouse  no

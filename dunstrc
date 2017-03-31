@@ -1,5 +1,5 @@
 [global]
-    font = Terminus 11
+    font = Droid Sans Mono Dotted 12
 
     format = "%a: %s %b"
     sort = yes
