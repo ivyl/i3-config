@@ -61,5 +61,3 @@ compton --config $I3_CONFIG_DIR/compton.conf &
 
 i3-regenerate
 i3
-
-true
