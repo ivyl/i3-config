@@ -1,5 +1,5 @@
 [global]
-    font = Droid Sans Mono Dotted 12
+    font = xos4 Terminus 12px
 
     format = "%a: %s %b"
     sort = yes
