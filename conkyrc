@@ -10,23 +10,22 @@ conky.config = {
 };
 
 conky.text = [[
-,[{"full_text": " ❤ $acpitemp°C [$cpu%] ",                                        "color":"\#DC322F"},
-  {"full_text": " ≣ [$membar] ",                                                  "color":"\#B58900"},
+,[{"full_text": " CPU: $acpitemp°C [$cpu%] ",                                         "color":"\#DC322F"},
+  {"full_text": " MEM: [$membar] ",                                                   "color":"\#B58900"},
   ${if_up tap0}
-  {"full_text": " ≈ VPN ",                                                        "color":"\#2AA198"},
-  $else${if_up wlan0}
-  {"full_text": " ≈ ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#2AA198"},
-  $else${if_up ppp0}
-  {"full_text": " ≈ HSDPA ",                                                      "color":"\#2AA198"},
+  {"full_text": " [VPN] ",                                                           "color":"\#2AA198"},
+  $endif
+  ${if_up wlan0}
+  {"full_text": " WLAN: ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#2AA198"},
   $else${if_up eth1}
-  {"full_text": " ≈ eth1 ",                                                       "color":"\#2AA198"},
+  {"full_text": " eth1 ",                                                             "color":"\#2AA198"},
   $else${if_up eth0}
-  {"full_text": " ≈ eth0 ",                                                       "color":"\#2AA198"},
+  {"full_text": " eth0 ",                                                             "color":"\#2AA198"},
   $else
-  {"full_text": " ≈ no connection ",                                              "color":"\#2AA198"},
-  $endif$endif$endif$endif$endif
-  {"full_text": " ☇ [$battery_percent%] ",                                        "color":"\#6C71C4"},
-  {"full_text": " ♪ [$mixer%] ",                                                  "color":"\#268BD2"},
+  {"full_text": " ~ no connection ",                                                  "color":"\#2AA198"},
+  $endif$endif$endif
+  {"full_text": " BAT: [$battery_percent%]${exec bat_charge.sh} ",                    "color":"\#7C71C4"},
+  {"full_text": " SND: [$mixer%] ",                                                   "color":"\#268BD2"},
   {"full_text": " FM ${tztime US/Pacific %H:%M} "},
   {"full_text": " BA ${tztime Asia/Calcutta %H:%M} "},
   {"full_text": " ${time WW%V.%u, %a %d %b} "},
