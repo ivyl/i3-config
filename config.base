@@ -114,7 +114,7 @@ bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
 
-bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
+bindsym XF86WakeUp exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
 
 bindsym XF86Display exec "arandr"
 
