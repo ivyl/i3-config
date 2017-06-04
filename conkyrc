@@ -26,9 +26,9 @@ conky.text = [[
   $endif$endif$endif
   {"full_text": " BAT: [$battery_percent%]${exec bat_charge.sh} ",                    "color":"\#7C71C4"},
   {"full_text": " SND: [$mixer%] ",                                                   "color":"\#268BD2"},
-  {"full_text": " FM ${tztime US/Pacific %H:%M} "},
-  {"full_text": " BA ${tztime Asia/Calcutta %H:%M} "},
+  {"full_text": " PT ${tztime US/Pacific %H:%M} "},
+  {"full_text": " PL ${tztime Europe/Warsaw %H:%M} "},
   {"full_text": " ${time WW%V.%u, %a %d %b} "},
-  {"full_text": " ${time %H:%M} "}
+  {"full_text": " FI ${time %H:%M} "}
 ]
 ]];
