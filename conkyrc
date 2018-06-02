@@ -27,7 +27,9 @@ conky.text = [[
   $else
   {"full_text": " ~ no connection ",                                                  "color":"\#2AA198"},
   $endif$endif$endif
+  ${if_existing /sys/class/power_supply/BAT0}
   {"full_text": " BAT: [$battery_percent%]${exec bat_charge.sh} ",                    "color":"\#7C71C4"},
+  $endif
   ${if_pa_sink_muted}
   {"full_text": " SND: [XX] ",                                                   "color":"\#268BD2"},
   $else
