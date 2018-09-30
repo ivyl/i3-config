@@ -1,0 +1,5 @@
+#!/bin/sh
+CONKYRC=$(dirname "$0")/../conkyrc
+echo "{\"version\":1}"
+echo "[[]"
+conky -c $CONKYRC 2>/dev/null

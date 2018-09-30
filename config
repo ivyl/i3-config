@@ -1,0 +1,31 @@
+set $mod Mod4
+
+font Terminus 11px
+new_window pixel 3
+
+include config.d/colors
+include config.d/workspaces
+include config.d/resize-mode
+
+bindsym $mod+z reload
+bindsym $mod+Shift+x restart
+bindsym $mod+Shift+z exit
+
+bindsym $mod+Return exec st
+
+bindsym $mod+p       exec dmenu_run -p run    -sb "\\$based1"  -nb "\\$based3" -nf "\\$based0" -fn Terminus-6
+bindsym $mod+Shift+p exec ~/bin/pass-autotype -sb "\\$magenta" -nb "\\$based3" -nf "\\$based0" -fn Terminus-6
+
+bindsym Control+$mod+l exec swaylock -c "\\$based3"
+
+bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
+bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
+bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
+bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
+
+bindsym $mod+a exec "st -e alsamixer"
+bindsym $mod+Shift+a exec "pavucontrol"
+
+include config.d/bar
+include config.d/autostart
+include config.d/local

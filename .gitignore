@@ -1,6 +1,3 @@
-config
-config.local
+config.d/local
+config.debug
 systemd/user/default.target.wants
-screen_setup
-xmodmap_local
-redshift

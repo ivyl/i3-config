@@ -1,0 +1,3 @@
+exec sway-dunst-wrapper
+exec udiskie
+exec gpg-connect-agent updatestartuptty /bye

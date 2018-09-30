@@ -1,4 +1,0 @@
-#!/bin/sh
-echo "{\"version\":1}"
-echo "[[]"
-conky -c $I3_CONFIG_DIR/conkyrc 2>/dev/null

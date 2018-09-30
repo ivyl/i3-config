@@ -1,0 +1,13 @@
+bar {
+        position top
+        status_command swaybar-conky-wrapper
+        strip_workspace_numbers yes
+        colors {
+                statusline $based0
+                background $based3
+                focused_workspace $based3 $based3 $base3
+                inactive_workspace $based3 $based2 $base0
+                active_workspace $based3 $based2 $base3
+                urgent_workspace $based3 $magenta $base2
+        }
+}
