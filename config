@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font Terminus 11px
+font Terminus,xos4 Terminus 11px
 new_window pixel 3
 
 include config.d/colors
