@@ -1,3 +1,5 @@
-exec sway-dunst-wrapper
+exec mako --font "$font" --border-color "$magenta" --background-color "$based2" --text-color "$base3"
+bindsym $mod+period exec makoctl dismiss
+
 exec udiskie
 exec gpg-connect-agent updatestartuptty /bye

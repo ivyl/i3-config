@@ -1,3 +1,0 @@
-#!/bin/sh
-DUNSTRC=$(dirname "$0")/../dunstrc
-dunst -config $DUNSTRC
