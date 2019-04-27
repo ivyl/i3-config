@@ -1,0 +1,15 @@
+#!/bin/zsh
+export SELECTION_FILE=$(mktemp)
+export PASSWORD_STORE_DIR
+
+$@ -e "$(readlink -f "$(dirname $0)")/fzf-select-pass"
+
+SELECTION="$(cat $SELECTION_FILE)"
+
+if [ -n "$SELECTION" ]; then
+    pass "$SELECTION" |
+        { read -r pass; printf %s "$pass"; } |
+        xdotool type --clearmodifiers --file -
+fi
+
+rm $SELECTION_FILE

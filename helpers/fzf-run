@@ -1,0 +1,2 @@
+#!/bin/sh
+dmenu_path | fzf --prompt="fzf-run > " | xargs sway exec

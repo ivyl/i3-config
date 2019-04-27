@@ -15,8 +15,11 @@ bindsym $mod+Shift+z exit
 
 bindsym $mod+Return exec $term -t term
 
-bindsym $mod+p       exec dmenu_run -p run    -sb "$based1"  -nb "$based3" -nf "$based0"
-bindsym $mod+Shift+p exec ~/bin/pass-autotype -sb "$magenta" -nb "$based3" -nf "$based0"
+
+for_window [title="^fzf-select$"] floating enable
+
+bindsym $mod+p       exec $term -t fzf-select -e $HOME/.config/sway/helpers/fzf-run
+bindsym $mod+Shift+p exec $HOME/.config/sway/helpers/fzf-select-pass-term-spawn $term -t fzf-select
 
 bindsym Control+$mod+l exec swaylock -c "$based3"
 

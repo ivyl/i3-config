@@ -1,0 +1,28 @@
+#!/usr/bin/env zsh
+
+PASSWORD_STORE_DIR=${PASSWORD_STORE_DIR-~/.password-store}
+FZF_PROMPT=${FZF_PROMPT-pass-autotype >}
+
+if [[ ! -d "$PASSWORD_STORE_DIR" ]]; then
+    printf "Configure \$PASSWORD_STORE_DIR.\n" 1>&2
+    exit 1
+fi
+
+if [[ ! -w "$SELECTION_FILE" ]]; then
+    printf "Configure \$SELECTION_FILE.\n" 1>&2
+    exit 1
+fi
+
+MATCHES=("$PASSWORD_STORE_DIR"/**/*.gpg)
+MATCHES=("${MATCHES[@]#"$PASSWORD_STORE_DIR"/}")
+MATCHES=("${MATCHES[@]%.gpg}")
+
+choice="$(printf '%s\n' ${MATCHES[@]} | fzf --prompt '${pass-autotype >')"
+
+if [[ -z $choice ]]; then
+    printf "Nothing choosen.\n" 1>&2
+    exit 1
+fi
+
+echo "$choice" > $SELECTION_FILE
+
