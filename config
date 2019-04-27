@@ -1,5 +1,6 @@
 set $mod Mod4
 set $font Terminus,xos4 Terminus 11px
+set $term alacritty --config-file $HOME/.config/sway/alacritty.yml
 
 font $font
 new_window pixel 3
@@ -12,7 +13,7 @@ bindsym $mod+z reload
 bindsym $mod+Shift+x restart
 bindsym $mod+Shift+z exit
 
-bindsym $mod+Return exec st
+bindsym $mod+Return exec $term -t term
 
 bindsym $mod+p       exec dmenu_run -p run    -sb "$based1"  -nb "$based3" -nf "$based0"
 bindsym $mod+Shift+p exec ~/bin/pass-autotype -sb "$magenta" -nb "$based3" -nf "$based0"
@@ -24,7 +25,7 @@ bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
 
-bindsym $mod+a exec "st -e alsamixer"
+bindsym $mod+a exec $term -t mixer -e alsamixer
 bindsym $mod+Shift+a exec "pavucontrol"
 
 include config.d/bar
