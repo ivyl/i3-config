@@ -5,6 +5,8 @@ set $term alacritty --config-file $HOME/.config/sway/alacritty.yml
 font $font
 default_border pixel 3
 
+seat * hide_cursor 2000
+
 include config.d/colors
 include config.d/workspaces
 include config.d/resize-mode

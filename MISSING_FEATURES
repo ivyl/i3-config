@@ -2,9 +2,6 @@
 
 # MISSING FETURES
 
-# hide mouse coursor when it isn't used
-unclutter -root -visible &
-
 # ctrl/esc combo
 xcape
 
