@@ -3,3 +3,5 @@ bindsym $mod+period exec makoctl dismiss
 
 exec udiskie
 exec gpg-connect-agent updatestartuptty /bye
+
+exec redshift -l manual:lat=60.167:lon=24.952
