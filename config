@@ -3,7 +3,7 @@ set $font Terminus,xos4 Terminus 11px
 set $term alacritty --config-file $HOME/.config/sway/alacritty.yml
 
 font $font
-new_window pixel 3
+default_border pixel 3
 
 include config.d/colors
 include config.d/workspaces
