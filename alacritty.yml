@@ -3,8 +3,8 @@ scrolling:
 
 font:
   normal:
-    family: terminus
-  size: 8.0
+    family: JetBrains Mono
+  size: 10.0
 
 draw_bold_text_with_bright_colors: false
 

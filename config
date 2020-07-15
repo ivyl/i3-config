@@ -1,5 +1,5 @@
 set $mod Mod4
-set $font Terminus,xos4 Terminus 11px
+set $font "JetBrains Mono 10"
 set $term alacritty --config-file $HOME/.config/sway/alacritty.yml
 
 font $font
