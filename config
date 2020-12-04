@@ -33,6 +33,11 @@ bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
 bindsym $mod+a exec $term -t mixer -e alsamixer
 bindsym $mod+Shift+a exec "pavucontrol"
 
+input * {
+	xkb_layout pl
+	xkb_options ctrl:nocaps
+}
+
 include config.d/bar
 include config.d/autostart
 include config.d/local
