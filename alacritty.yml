@@ -37,5 +37,5 @@ colors:
     cyan:    '0x93a1a1'
     white:   '0xfdf6e3'
 
-visual_bell:
+bell:
   duration: 0
