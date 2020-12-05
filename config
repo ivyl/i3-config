@@ -25,13 +25,21 @@ bindsym $mod+Shift+p exec $HOME/.config/sway/helpers/fzf-select-pass-term-spawn 
 
 bindsym Control+$mod+l exec swaylock -c "$based3"
 
-bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
-bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
-bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +4dB"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -4dB"
+bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioMicMute exec "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 
 bindsym $mod+a exec $term -t mixer -e alsamixer
 bindsym $mod+Shift+a exec "pavucontrol"
+
+bindsym $mod+F2 exec "playerctl previous"
+bindsym $mod+F3 exec "playerctl play-pause"
+bindsym $mod+F4 exec "playerctl next"
+
+bindsym $mod+F1 exec "pactl set-sink-volume @DEFAULT_SINK@ +4dB"
+bindsym $mod+F7 exec "pactl set-sink-volume @DEFAULT_SINK@ -4dB"
+bindsym $mod+F8 exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
 input * {
 	xkb_layout pl
