@@ -41,9 +41,8 @@ conky.text = [[
   {"color":"\#268BD2", "full_text": " SND: [${pa_sink_volume}%] "},
   $endif
 
-  {"full_text": " PT ${tztime US/Pacific %H:%M} "},
-  {"full_text": " PL ${tztime Europe/Warsaw %H:%M} "},
-  {"full_text": " ${time WW%V.%u, %a %d %b} "},
+  {"full_text": " MN ${tztime US/Central %H:%M} "},
+  {"full_text": " ${time %a %d %b} "},
   {"full_text": " FI ${time %H:%M} "}
 ]
 ]];
