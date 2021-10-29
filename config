@@ -54,3 +54,4 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec echo 'Xft.dpi: 96' |  xrdb -load
+exec swayidle -w before-sleep 'swaylock -c "$based3"'
