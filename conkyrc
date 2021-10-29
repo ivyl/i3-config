@@ -7,38 +7,21 @@ conky.config = {
 	short_units          = true,
 	pad_percents         = 3,
 	override_utf8_locale = true,
+	lua_load             = '~/.config/sway/conky.lua',
 };
 
 conky.text = [[
-,[{"color":"\#DC322F", "full_text": " CPU: $acpitemp°C [$cpu%] "},
-  {"color":"\#B58900", "full_text": " MEM: [$membar] "},
-  ${if_up tap0}
-  {"color":"\#859900", "full_text": " [VPN] "},
-  $endif
-  ${if_up vpn0}
-  {"color":"\#859900", "full_text": " [VPN] "},
-  $endif
-  ${if_up tun0}
-  {"color":"\#859900", "full_text": " [VPN] "},
-  $endif
-  ${if_up wlp3s0}
-  {"color":"\#2AA198", "full_text": " WLAN: $wireless_essid "},
-  $else${if_up wlan0}
-  {"color":"\#2AA198", "full_text": " WLAN: $wireless_essid "},
-  $else${if_up eth1}
-  {"color":"\#2AA198", "full_text": " eth1 "},
-  $else${if_up eth0}
-  {"color":"\#2AA198", "full_text": " eth0 "},
-  $else
-  {"color":"\#2AA198", "full_text": " ~ no connection "},
-  $endif$endif$endif$endif
+,[{"color":"\#DC322F", "full_text": "  ${hwmon k10temp temp 1}°C [$cpu%] "},
+  {"color":"\#B58900", "full_text": "  [$membar] "},
+  ${lua vpn}
+  {"color":"\#2AA198", "full_text": " ${lua_parse network_type} "},
   ${if_existing /sys/class/power_supply/BAT0}
-  {"color":"\#7C71C4", "full_text": " BAT: [$battery_percent%]${exec bat_charge.sh} "},
+  {"color":"\#7C71C4", "full_text": "  $battery_percent%${if_match "$acpiacadapter" == "on-line"} ${endif} "},
   $endif
   ${if_pa_sink_muted}
-  {"color":"\#268BD2", "full_text": " SND: [XX] "},
+  {"color":"\#268BD2", "full_text": "  "},
   $else
-  {"color":"\#268BD2", "full_text": " SND: [${pa_sink_volume}%] "},
+  {"color":"\#268BD2", "full_text": " ${if_match "${pa_sink_active_port_description}"=="Headset"} $endif ${pa_sink_volume}% "},
   $endif
 
   {"full_text": " MN ${tztime US/Central %H:%M} "},
