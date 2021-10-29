@@ -9,7 +9,7 @@ SELECTION="$(cat $SELECTION_FILE)"
 if [ -n "$SELECTION" ]; then
     pass "$SELECTION" |
         { read -r pass; printf %s "$pass"; } |
-        xdotool type --clearmodifiers --file -
+        wtype -
 fi
 
 rm $SELECTION_FILE
