@@ -11,7 +11,8 @@ function conky_network_type ()
 	if starts_with(gw, "en") then
 		return " " .. gw
 	elseif starts_with(gw, "wl") then
-		return "  ${wireless_essid} " .. gw
+		local strength = tonumber(conky_parse("${wireless_link_qual_perc " .. gw .. " }"))
+		return " ${wireless_essid " .. gw .. "} ".. strength .. "%"
 	end
 	return " ⚠ " .. gw
 end
