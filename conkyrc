@@ -21,7 +21,7 @@ conky.text = [[
   ${if_pa_sink_muted}
   {"color":"\#268BD2", "full_text": "  "},
   $else
-  {"color":"\#268BD2", "full_text": " ${if_match "${pa_sink_active_port_description}"=="Headset"} $endif ${pa_sink_volume}% "},
+  {"color":"\#268BD2", "full_text": " ${lua audio_icon} ${pa_sink_volume}% "},
   $endif
 
   {"full_text": " MN ${tztime US/Central %H:%M} "},

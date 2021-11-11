@@ -42,3 +42,15 @@ function conky_battery_icon ()
 		return ""
 	end
 end
+
+function conky_audio_icon ()
+	local port_desc = conky_parse("$pa_sink_active_port_description")
+	if port_desc == "Headset" then
+		return " "
+	elseif port_desc == "Headphones" or port_desc == "Analog Output" then
+		return ""
+	elseif port_desc == "Speaker" then
+		return ""
+	end
+	return conky_parse("$pa_sink_active_port_description")
+end
