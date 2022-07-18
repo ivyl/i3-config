@@ -18,11 +18,11 @@ function conky_network_type ()
 end
 
 function conky_vpn ()
-	str = ""
-	for file in lfs.dir[[/sys/class/net/]] do
-		if string.match(file, "mullvad") or file == "cw" then
-			str = str .. '{"color":"#859900", "full_text": "  ' .. file .. ' "},'
-		end
+	local str = ""
+
+	local interfaces = conky_parse ("${execi 5 wg show interfaces}")
+	for wg in interfaces:gmatch("%S+") do
+		str = str .. '{"color":"#859900", "full_text": "  ' .. wg .. ' "},'
 	end
 
 	return str
