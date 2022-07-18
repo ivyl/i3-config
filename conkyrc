@@ -12,7 +12,7 @@ conky.config = {
 
 conky.text = [[
 ,[{"color":"\#DC322F", "full_text": "  ${hwmon k10temp temp 1}°C [$cpu%] "},
-  {"color":"\#CB4B16", "full_text": "  [$membar] "},
+  {"color":"\#CB4B16", "full_text": "  [$membar] "},
   {"color":"\#B58900", "full_text": "  ${fs_used_perc /}% "},
   ${lua vpn}
   {"color":"\#2AA198", "full_text": " ${lua_parse network_type} "},
