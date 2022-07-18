@@ -28,19 +28,22 @@ function conky_vpn ()
 	return str
 end
 
-function conky_battery_icon ()
-	local percent = tonumber(conky_parse("$battery_percent"))
-	if percent < 15 then
-		return ""
-	elseif percent < 35 then
-		return ""
-	elseif percent < 60 then
-		return ""
-	elseif percent < 85 then
-		return ""
-	else
+function local_battery_icon (percent)
+	if percent > 80 then
 		return ""
+	elseif percent > 60 then
+		return ""
+	elseif percent > 40 then
+		return ""
+	elseif percent > 15 then
+		return ""
+	else
+		return ""
 	end
+end
+
+function conky_battery_icon ()
+	return local_battery_icon(tonumber(conky_parse("$battery_percent")))
 end
 
 function conky_audio_icon ()

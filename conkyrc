@@ -17,7 +17,7 @@ conky.text = [[
   ${lua vpn}
   {"color":"\#2AA198", "full_text": " ${lua_parse network_type} "},
   ${if_existing /sys/class/power_supply/BAT0}
-  {"color":"\#7C71C4", "full_text": " ${lua battery_icon} $battery_percent%${if_match "$acpiacadapter" == "on-line"} ${endif} "},
+  {"color":"\#7C71C4", "full_text": "  ${lua battery_icon} $battery_percent%${if_match "$acpiacadapter" == "on-line"} ${endif} "},
   $endif
   ${if_pa_sink_muted}
   {"color":"\#268BD2", "full_text": "  "},
