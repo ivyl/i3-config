@@ -5,8 +5,8 @@ local function starts_with(str, start)
    return string.sub(str, 1, string.len(start)) == start
 end
 
-function conky_network_type ()
-	local gw = conky_parse ("${gw_iface}")
+function conky_network_type()
+	local gw = conky_parse("${gw_iface}")
 	-- local gw = "wlo"
 	if starts_with(gw, "en") then
 		return " " .. gw
@@ -17,10 +17,10 @@ function conky_network_type ()
 	return " ⚠ " .. gw
 end
 
-function conky_vpn ()
+function conky_vpn()
 	local str = ""
 
-	local interfaces = conky_parse ("${execi 5 wg show interfaces}")
+	local interfaces = conky_parse("${execi 5 wg show interfaces}")
 	for wg in interfaces:gmatch("%S+") do
 		str = str .. '{"color":"#859900", "full_text": "  ' .. wg .. ' "},'
 	end
@@ -28,7 +28,7 @@ function conky_vpn ()
 	return str
 end
 
-function local_battery_icon (percent)
+function local_battery_icon(percent)
 	if percent > 80 then
 		return ""
 	elseif percent > 60 then
@@ -42,11 +42,11 @@ function local_battery_icon (percent)
 	end
 end
 
-function conky_battery_icon ()
+function conky_battery_icon()
 	return local_battery_icon(tonumber(conky_parse("$battery_percent")))
 end
 
-function conky_audio_icon ()
+function conky_audio_icon()
 	local port_desc = conky_parse("$pa_sink_active_port_description")
 	if port_desc == "Headset" then
 		return " "
