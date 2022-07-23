@@ -26,15 +26,34 @@ function conky_network_type()
 	return " ⚠ " .. gw
 end
 
+SYSCLASSNET = ""
+WGS = ""
+
 function conky_vpn()
 	local str = ""
+	local current_interfaces = ""
+	local wg_interfaces = ""
 
-	local interfaces = conky_parse("${execi 5 wg show interfaces}")
-	for wg in interfaces:gmatch("%S+") do
-		str = str .. '{"color":"#859900", "full_text": "  ' .. wg .. ' "},'
+	for interface in lfs.dir("/sys/class/net") do
+		current_interfaces =  current_interfaces .. interface
 	end
 
-	return str
+	if current_interfaces ~= SYSCLASSNET then
+		SYSCLASSNET = current_interfaces
+
+		local handle = io.popen("wg show interfaces")
+		if handle ~= nil then
+			wg_interfaces = handle:read("*a")
+			handle:close()
+		end
+
+		for wg in wg_interfaces:gmatch("%S+") do
+			str = str .. '{"color":"#859900", "full_text": "  ' .. wg .. ' "},'
+		end
+		WGS = str
+	end
+
+	return WGS
 end
 
 function local_battery_icon(percent)
