@@ -61,8 +61,8 @@ function conky_audio_icon()
 		return " "
 	elseif port_desc == "Headphones" or port_desc == "Analog Output" then
 		return ""
-	elseif port_desc == "Speaker" then
-		return ""
+	elseif port_desc == "Speaker" or port_desc == "Speakers" then
+		return "🔊"
 	end
 	return conky_parse("$pa_sink_active_port_description")
 end
