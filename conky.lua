@@ -5,6 +5,15 @@ local function starts_with(str, start)
    return string.sub(str, 1, string.len(start)) == start
 end
 
+function conky_cpu_temp()
+	local k10temp = conky_parse("${hwmon k10temp temp 1}")
+	if k10temp ~= "" then
+		return k10temp
+	else
+		return conky_parse("${hwmon coretemp temp 1}")
+	end
+end
+
 function conky_network_type()
 	local gw = conky_parse("${gw_iface}")
 
