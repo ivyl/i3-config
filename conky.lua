@@ -7,7 +7,7 @@ end
 
 function conky_network_type()
 	local gw = conky_parse("${gw_iface}")
-	-- local gw = "wlo"
+
 	if starts_with(gw, "en") then
 		return " " .. gw
 	elseif starts_with(gw, "wl") then
