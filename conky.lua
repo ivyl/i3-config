@@ -23,7 +23,7 @@ function conky_network_type()
 		local strength = tonumber(conky_parse("${wireless_link_qual_perc " .. gw .. " }"))
 		return " ${wireless_essid " .. gw .. "} ".. strength .. "%"
 	end
-	return " ⚠ " .. gw
+	return "⚠ " .. gw
 end
 
 SYSCLASSNET = ""
