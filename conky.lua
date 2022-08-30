@@ -17,7 +17,7 @@ end
 function conky_network_type()
 	local gw = conky_parse("${gw_iface}")
 
-	if starts_with(gw, "en") then
+	if starts_with(gw, "en") or starts_with(gw, "eth") then
 		return " " .. gw
 	elseif starts_with(gw, "wl") then
 		local strength = tonumber(conky_parse("${wireless_link_qual_perc " .. gw .. " }"))
